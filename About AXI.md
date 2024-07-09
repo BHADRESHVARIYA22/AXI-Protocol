@@ -19,11 +19,11 @@ AXI  protocol part of AMBA family, AMBA stands for Advanced Microcontroller Bus 
 
 **AXI Architecture**
 The AXI protocol is burst-based and defines the following independent transaction channels:
-   • read address
-   • read data
-   • write address
-   • write data
-   • write response.
+    read address
+    read data
+    write address
+    write data
+    write response.
 An address channel carries control information that describes the nature of the data to be transferred. The data is
 transferred between master and slave using either:
    • A write data channel to transfer data from the master to the slave. In a write transaction, 

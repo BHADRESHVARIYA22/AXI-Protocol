@@ -30,15 +30,7 @@ transferred between master and slave using either:
      the slave uses the write response channel to signal the completion of the transfer to the master.
    • A read data channel to transfer data from the slave to the master.
 
-![image](https://github.com/BHADRESHVARIYA22/AXI-Protocol/assets/87941725/6d0f1415-2bfe-4fdd-89dc-cadb724a24cb)
-
-![image](https://github.com/BHADRESHVARIYA22/AXI-Protocol/assets/87941725/819e8265-bbd9-423f-af1d-994785baf310)
-
-
-
-
-
-
+![image](https://github.com/BHADRESHVARIYA22/AXI-Protocol/assets/87941725/95f42a38-0b15-49a8-8d65-cf37c253edca)
 
 
 

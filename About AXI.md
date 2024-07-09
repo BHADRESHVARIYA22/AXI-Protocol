@@ -32,5 +32,56 @@ transferred between master and slave using either:
 
 ![image](https://github.com/BHADRESHVARIYA22/AXI-Protocol/assets/87941725/95f42a38-0b15-49a8-8d65-cf37c253edca)
 
+**VALID , READY and LAST signal**
+VALID : At Source Side : show when Valid Address, data & control information available on the channel
+READY : At Destination : show when accept information (Both Read and Write data channel)
+LAST  : At Destination : Indicates the transfer of final data item in transaction
+
+
+**Read and Write address channels**
+ Read and write transactions each have their own address channel. 
+ The appropriate address channel carries all of the required address and control information for a transaction
+
+**Read data channel**
+ The read data channel carries both the read data and the read response information from the slave to the master, and includes:
+   • the data bus, that can be 8, 16, 32, 64, 128, 256, 512, or 1024 bits wide
+   • a read response signal indicating the completion status of the read transaction.
+
+**Write data channel**
+  The write data channel carries the write data from the master to the slave and includes:
+    • the data bus, that can be 8, 16, 32, 64, 128, 256, 512, or 1024 bits wide
+    • a byte lane strobe signal for every eight data bits, indicating which bytes of the data are valid.
+ Write data channel information is always treated as buffered, so that the master can perform write transactions without slave acknowledgement of 
+ previous write transactions.
+
+**Write response channel**
+ A slave uses the write response channel to respond to write transactions. All write transactions require completion signaling on the write    
+ response channel.
+
+**Interface and interconnect**
+ A typical system consists of a number of master and slave devices connected together through some form of interconnect
+ The AXI protocol provides a single interface definition, for the interfaces:
+   • between a master and the interconnect
+   • between a slave and the interconnect
+   • between a master and a slave.
+This interface definition supports a variety of different interconnect implementations.
+
+**Typical system topologies**
+ Most systems use one of three interconnect topologies:
+   • shared address and data buses
+   • shared address buses and multiple data buses
+   • multilayer, with multiple address and data buses.
+   
+ In most systems, the address channel bandwidth requirement is significantly less than the data channel bandwidth
+ requirement. Such systems can achieve a good balance between system performance and interconnect complexity
+ by using a shared address bus with multiple data buses to enable parallel data transfers.
+
+
+ 
+ 
+
+
+
+
 
 

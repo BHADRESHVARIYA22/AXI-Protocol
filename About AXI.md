@@ -31,6 +31,8 @@ transferred between master and slave using either:
    • A read data channel to transfer data from the slave to the master.
 
 ![image](https://github.com/BHADRESHVARIYA22/AXI-Protocol/assets/87941725/95f42a38-0b15-49a8-8d65-cf37c253edca)
+![image](https://github.com/BHADRESHVARIYA22/AXI-Protocol/assets/87941725/f0f95770-4b4c-479f-9e72-aebb405768e7)
+
 
 **VALID , READY and LAST signal**
 VALID : At Source Side : show when Valid Address, data & control information available on the channel

@@ -1,8 +1,8 @@
 AXI  protocol part of AMBA family, AMBA stands for Advanced Microcontroller Bus Architecture.
 
-**The AXI protocol:**
-  • is suitable for high-bandwidth and low-latency designs
-  • provides high-frequency operation without using complex bridges
+**The AXI protocol:**  
+  • is suitable for high-bandwidth and low-latency designs  
+  • provides high-frequency operation without using complex bridges  
   • meets the interface requirements of a wide range of components
   • is suitable for memory controllers with high initial access latency
   • provides flexibility in the implementation of interconnect architectures

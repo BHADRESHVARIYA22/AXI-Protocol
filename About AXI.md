@@ -78,13 +78,16 @@ An address channel carries control information that describes the nature of the 
     - 
       ![image](https://github.com/BHADRESHVARIYA22/AXI-Protocol/assets/87941725/30370aa4-8353-4ef2-b541-b480dc019d38)
 
-**Interface and interconnect**  
- A typical system consists of a number of master and slave devices connected together through some form of interconnect
- The AXI protocol provides a single interface definition, for the interfaces:
-   • between a master and the interconnect
-   • between a slave and the interconnect
-   • between a master and a slave.
-This interface definition supports a variety of different interconnect implementations.
+## **Interface and interconnect**  
+  - A typical system consists of a number of master and slave devices connected together through some form of interconnect
+    ![image](https://github.com/BHADRESHVARIYA22/AXI-Protocol/assets/87941725/4235ae5e-cbcd-4eda-9650-b6898fe943a9)
+
+  - The AXI protocol provides a single interface definition, for the interfaces:
+    - between a master and the interconnect
+    - between a slave and the interconnect
+    - between a master and a slave.  
+  - This interface definition supports a variety of different interconnect implementations.  
+  - An interconnect between devices is equivalent to another device with symmetrical master and slave ports to which real master and slave devices can be connected.  
 
 **Typical system topologies**
  Most systems use one of three interconnect topologies:

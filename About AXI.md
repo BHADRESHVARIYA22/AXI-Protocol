@@ -144,12 +144,12 @@ An address channel carries control information that describes the nature of the 
   - Read data channel signals  
   - Low-power interface signals  
 
-#### Global signals 
+## Global signals 
   - **ACLK**    : Global clock signal.
     - All input signals are sampled on the rising edge of ACLK. All output signal changes must occur after the rising edge of ACLK.   
   - **ARESETn** : Global reset signal, active LOW.
     
-#### Write address channel signals  
+## Write address channel signals  
   - **Signal** _Source_ Description  
   - **AWID** _Master_  
     - Write address ID. This signal is the identification tag for the write address group of signals.  
@@ -177,11 +177,11 @@ An address channel carries control information that describes the nature of the 
     - Write address valid. This signal indicates that the channel is signaling valid write address and control information.   
   - **AWREADY** Slave  
     - Write address ready. This signal indicates that the slave is ready to accept an address and associated control signals.  
-#### Write data channel signals  
-#### Write response channel signals  
-#### Read address channel signals  
-#### Read data channel signals  
-#### Low-power interface signals  
+## Write data channel signals  
+## Write response channel signals  
+## Read address channel signals  
+## Read data channel signals  
+## Low-power interface signals  
  
  
 

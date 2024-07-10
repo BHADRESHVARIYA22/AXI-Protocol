@@ -75,13 +75,27 @@
 ## **the AXI protocol** 
   - The AXI (Advanced eXtensible Interface) protocol is a point-to-point interconnect protocol that is used to connect high-speed components such as processors, memories, and other peripherals in a system-on-chip (SoC) design.  
   - it is high speed, low latency protocol.
-  - It is a widely used protocol in the semiconductor industry, as it provides a high-bandwidth and low-latency interconnect solution.
+  - It is a widely used protocol in the semiconductor industry, as it provides a high-bandwidth and low-latency interconnect solution.  
     
-  **the key features of the AXI protocol**
-  - Separate read and write channels, Support for burst transactions, allowing for efficient data transfer, Support for multiple data widths and transfer sizes.
+  **the key features of the AXI protocol**  
+  - Separate read and write channels, Support for burst transactions, allowing for efficient data transfer, Support for multiple data widths and transfer sizes.  
 
-  **AXI burst**
-  - An AXI burst is a type of transaction that transfers a sequence of data between two components in a single transaction.
-  - Bursts are used to improve data transfer efficiency
-    
+  **AXI burst**  
+  - An AXI burst is a type of transaction that transfers a sequence of data between two components in a single transaction.  
+  - Bursts are used to improve data transfer efficiency  
+
+## **APB** :  
+  - The Advanced Peripheral Bus (APB) is used for connecting low bandwidth peripherals.  
+  - It is a simple non-pipelined protocol that can be used to communicate(read or write) from a bridge/master to a number of slaves through the shared bus.  
+  - The reads and writes shares the same set of signals and no burst data transfers are supported.  
+## **AHB**  
+  - The Advanced High-performance Bus (AHB) is used for connecting components that need higher bandwidth on a shared bus.  
+  - These could be a internal memory or an external memory interface, DMA , DSP etc but the shared bus would limit the number of agents.  
+  - Similar to APB, this is a shared bus protocol for multiple masters and slaves, but higher bandwidth is possible through burst data transfers.  
+  - **AHB-lite** protocol is a simplified version of AHB. The simplification comes with support for only a single master design and that removes need for any arbitration, retry, split transactions etc.  
+## **AXI**:   
+  - The Advanced Extensible interface (AXI) is useful for high bandwidth and low latency interconnects.  
+  - This is a point to point interconnect and overcomes the limitations of a shared bus protocol in terms of number of agents that can be connected.  
+  - The protocol also was an enhancement from AHB in terms of supporting multiple outstanding data transfers (pipe-lined), burst data transfers, separate read and write paths and supporting different bus widths.  
+  - **AXI-lite** protocol is a simplified version of AXI and the simplification comes in terms of no support for burst data transfers.     
     

@@ -105,6 +105,23 @@ An address channel carries control information that describes the nature of the 
   - These qualities make the following possible:  
     - Trade-off between cycles of latency and maximum frequency of operation.  
     - Direct, fast connection between a processor and high-performance memory, while using simple register slices to isolate longer paths to less performance critical peripherals.
+      
+#### **Terminology**    
+**Component**    
+  - Component can be used as a general term for master,slave, peripheral, and interconnect components.  
+**Master component**
+  - A component that initiates transactions.
+  - It is possible that a single component can act as both a master component and as a slave component
+**Slave component**
+  - component that receives transactions and responds to them.
+  - It is possible that a single component can act as both a slave component and as a master component
+**Interconnect component**
+  - A component with more than one AMBA interface that connects one or more master components to one or more slave components
+  - An interconnect component can be used to group together either:
+    - a set of masters so that they appear as a single master interface
+    - a set of slaves so that they appear as a single slave interface.
+
+
 
  
  

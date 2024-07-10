@@ -34,11 +34,7 @@ An address channel carries control information that describes the nature of the 
 ![image](https://github.com/BHADRESHVARIYA22/AXI-Protocol/assets/87941725/f0f95770-4b4c-479f-9e72-aebb405768e7)  
 
 
-**VALID , READY and LAST signal**  
-VALID : At Source Side : show when Valid Address, data & control information available on the channel  
-READY : At Destination : show when accept information (Both Read and Write data channel)  
-LAST  : At Destination : Indicates the transfer of final data item in transaction  
-
+## **Channel Defination**
 
 #### **Read and Write address channels**  
   - Read and write transactions each have their own address channel.
@@ -57,7 +53,8 @@ LAST  : At Destination : Indicates the transfer of final data item in transactio
  previous write transactions.  
 
 #### **Write response channel**  
- - A slave uses the write response channel to respond to write transactions. All write transactions require completion signaling on the write response channel.   
+ - A slave uses the write response channel to respond to write transactions. All write transactions require completion signaling on the write response channel.
+     
 
 **Interface and interconnect**  
  A typical system consists of a number of master and slave devices connected together through some form of interconnect

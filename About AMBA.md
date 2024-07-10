@@ -62,4 +62,26 @@
   2. AXI as native support for multiple outstanding transactions.   
   3. AXI supports transaction IDs. The user may issue multiple outstanding transactions per transaction ID.   
   4. User can insert a pipeline register anywhere in the path of any of the 5 channels, which helps in timing closure and help achieve higher operating frequency.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+## **What do you mean by multiple outstanding transactions? Why is it useful?**  
+  - Master initiates a transaction and doesn’t wait for it to complete(response to arrive) and initiates another transaction. So the first transaction is an outstanding transaction.  
+  - AXI supports multiple outstanding transactions so an AXI master doesn’t have to wait for a transaction to complete to initiate a new one. So the performance is boosted.  
+
+## **Difference between AHB and APB?**  
+  - AHB is a high-performance bus that is used to connect high-speed modules like CPUs, DMA controllers, and memory controllers.  
+  - APB, on the other hand, is a low-power, low-bandwidth bus that is used to connect slower peripherals like UARTs, timers, and GPIOs.  
+
+## **the AXI protocol** 
+  - The AXI (Advanced eXtensible Interface) protocol is a point-to-point interconnect protocol that is used to connect high-speed components such as processors, memories, and other peripherals in a system-on-chip (SoC) design.  
+  - it is high speed, low latency protocol.
+  - It is a widely used protocol in the semiconductor industry, as it provides a high-bandwidth and low-latency interconnect solution.
+    
+  **the key features of the AXI protocol**
+  - Separate read and write channels, Support for burst transactions, allowing for efficient data transfer, Support for multiple data widths and transfer sizes.
+
+  **AXI burst**
+  - An AXI burst is a type of transaction that transfers a sequence of data between two components in a single transaction.
+  - Bursts are used to improve data transfer efficiency
+    
     

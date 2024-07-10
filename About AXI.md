@@ -20,19 +20,20 @@ The AMBA AXI protocol supports high-performance, high-frequency system designs.
 
 ## **AXI Architecture**  
 - The AXI protocol is burst-based and defines the following independent transaction channels:
+- 2 Read Channels
   - read address
   - read data
+- 3 write Channels
   - write address
   - write data
   - write response.  
 
 An address channel carries control information that describes the nature of the data to be transferred. 
 #### **The data is transferred between master and slave using either:**  
-  - A write data channel to transfer data from the master to the slave. In a write transaction, the slave uses the write response channel to signal the completion of the transfer to the master.  
-![image](https://github.com/BHADRESHVARIYA22/AXI-Protocol/assets/87941725/95f42a38-0b15-49a8-8d65-cf37c253edca)
-  - A read data channel to transfer data from the slave to the master.  
-![image](https://github.com/BHADRESHVARIYA22/AXI-Protocol/assets/87941725/f0f95770-4b4c-479f-9e72-aebb405768e7)  
-
+  - A write data channel to transfer data from the master to the slave. In a write transaction, the slave uses the write response channel to signal the completion of the transfer to the master.
+  - A read data channel to transfer data from the slave to the master.
+    
+![image](https://github.com/BHADRESHVARIYA22/AXI-Protocol/assets/87941725/c780c079-6369-4cfa-824f-9544b340f712)
 
 ## **Channel Defination**
 
@@ -54,7 +55,28 @@ An address channel carries control information that describes the nature of the 
 
 #### **Write response channel**  
  - A slave uses the write response channel to respond to write transactions. All write transactions require completion signaling on the write response channel.
+
+#### **Transfer**
+  - A piece of data transmitted on a single channel is called a transfer. A transfer happens when both the VALID and READY signal are high while there is a rising edge of the clock.  
+  - For example, in the figure below, the transfer is happening on T3:
+  - 
+![image](https://github.com/BHADRESHVARIYA22/AXI-Protocol/assets/87941725/40cd945a-d788-432d-bc8b-2b62ad7280e7)
+
+#### **AXI Read Transaction**
+  -  An AXI Read transactions requires multiple transfers on the 2 Read channels.  
+    -  First, the Address Read Channel is sent from the Master to the Slave to set the address and some control signals.  
+    -  Then the data for this address is transmitted from the Slave to the Master on the Read data channel.  
+    -  Note that, as per the figure below, there can be multiple data transfers per address. This type of transaction is called a burst.
      
+     ![image](https://github.com/BHADRESHVARIYA22/AXI-Protocol/assets/87941725/4d149d73-cea9-426a-a2bf-94ec4476e9f2)
+
+#### **AXI Write Transactions**  
+  - An AXI Write transactions requires multiple transfers on the 3 Read channels.
+    - First, the Address Write Channel is sent Master to the Slave to set the address and some control signals.
+    - Then the data for this address is transmitted Master to the Slave on the Write data channel.
+    - Finally the write response is sent from the Slave to the Master on the Write Response Channel to indicate if the transfer was successful.
+    - 
+      ![image](https://github.com/BHADRESHVARIYA22/AXI-Protocol/assets/87941725/30370aa4-8353-4ef2-b541-b480dc019d38)
 
 **Interface and interconnect**  
  A typical system consists of a number of master and slave devices connected together through some form of interconnect

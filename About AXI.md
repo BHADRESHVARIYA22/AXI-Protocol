@@ -97,8 +97,14 @@ An address channel carries control information that describes the nature of the 
   
  In most systems, the address channel bandwidth requirement is significantly less than the data channel bandwidth
  requirement. Such systems can achieve a good balance between system performance and interconnect complexity
- by using a shared address bus with multiple data buses to enable parallel data transfers.
+ by using a shared address bus with multiple data buses to enable parallel data transfers.  
 
+#### **Register slices**  
+  - Each AXI channel transfers information in only one direction, and the architecture does not require any fixed relationship between the channels.  
+  - These qualities mean that a register slice can be inserted at almost any point in any channel at the cost of an additional cycle of latency.
+  - These qualities make the following possible:  
+    - Trade-off between cycles of latency and maximum frequency of operation.  
+    - Direct, fast connection between a processor and high-performance memory, while using simple register slices to isolate longer paths to less performance critical peripherals.
 
  
  

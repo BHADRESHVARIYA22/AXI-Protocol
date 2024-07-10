@@ -89,12 +89,12 @@ An address channel carries control information that describes the nature of the 
   - This interface definition supports a variety of different interconnect implementations.  
   - An interconnect between devices is equivalent to another device with symmetrical master and slave ports to which real master and slave devices can be connected.  
 
-**Typical system topologies**
- Most systems use one of three interconnect topologies:
-   • shared address and data buses
-   • shared address buses and multiple data buses
-   • multilayer, with multiple address and data buses.
-   
+#### **Typical system topologies**  
+- Most systems use one of three interconnect topologies:  
+  - shared address and data buses  
+  - shared address buses and multiple data buses  
+  - multilayer, with multiple address and data buses.  
+  
  In most systems, the address channel bandwidth requirement is significantly less than the data channel bandwidth
  requirement. Such systems can achieve a good balance between system performance and interconnect complexity
  by using a shared address bus with multiple data buses to enable parallel data transfers.

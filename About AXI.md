@@ -1,6 +1,6 @@
 AXI  protocol part of AMBA family, AMBA stands for Advanced Microcontroller Bus Architecture.  
 The AMBA AXI protocol supports high-performance, high-frequency system designs.  
-## **About AXI protocol**
+# **1. About AXI protocol**
 #### **The AXI protocol:**  
 - is suitable for high-bandwidth and low-latency designs
 - provides high-frequency operation without using complex bridges
@@ -124,6 +124,17 @@ An address channel carries control information that describes the nature of the 
   - An interconnect component can be used to group together either:
     - a set of masters so that they appear as a single master interface
     - a set of slaves so that they appear as a single slave interface.
+      
+**AXI Transaction**
+  - An AXI master initiates an AXI transaction to communicate with an AXI slave. Typically, the transaction requires information to be exchanged between the master and slave on multiple channels. The complete set of required information exchanges form the AXI transaction.
+    
+**AXI Brust**
+  - In an AXI transaction, the payload data is transferred in a single burst, that can comprise multiple beats, or individual data transfers.
+    
+**AXI Beat**
+  - An individual data transfer within an AXI burst.
+
+# 2. Signal Descriptions
 
 
 

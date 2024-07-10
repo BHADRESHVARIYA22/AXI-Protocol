@@ -1,8 +1,6 @@
 ## **What is AMBA protocol?**  
-      - AMBA (Advanced Microcontroller Bus Architecture) is a set of specifications for on-chip communication protocols that  are widely used in   
-        System-on-Chip (SoC) designs.  
-      - The AMBA protocols are developed and licensed by ARM Holdings, which is a company known for designing microprocessors and 
-        microcontrollers.
+  AMBA (Advanced Microcontroller Bus Architecture) is a set of specifications for on-chip communication protocols that  are widely used in System-on-Chip (SoC) designs.  
+  The AMBA protocols are developed and licensed by ARM Holdings, which is a company known for designing microprocessors and microcontrollers.
 
 **the main components of AMBA protocol?**  
     1. Advanced Peripheral Bus (APB)  
@@ -55,16 +53,13 @@
     - Address channel  
     - Data channel  
 
-    In summary,
-    AXI is the most advanced protocol with the highest number of channels, while AHB and APB are simpler protocols with fewer channels.  
-    The number of channels used by each protocol determines the efficiency, performance, and complexity of the communication between   
-    different components in a System-on-Chip (SoC).  
+  In summary,
+  AXI is the most advanced protocol with the highest number of channels, while AHB and APB are simpler protocols with fewer channels.The number of channels used by each protocol determines the efficiency, performance, and complexity of the communication between different components in a System-on-Chip (SoC).  
+  
 -----------------------------------------------------------------------------------------------------------------------------------------------
 ## **ADVANTAGES OF AXI OVER AHB PROTOCOL?**  
-    1. AXI has 1 read address channel, 1 write address channel, 1 read data channel, 1 write data channel. 1  write response channel   
-       That is all together it has 5 parallel channels.  
-       Whereas AHB has 1 address channel, 1 read data channel, 1 write data channel.  
-    2. AXI as native support for multiple outstanding transactions.   
-    3. AXI supports transaction IDs. The user may issue multiple outstanding transactions per transaction ID.   
-    4. User can insert a pipeline register anywhere in the path of any of the 5 channels, which helps in timing closure and help achieve higher operating frequency.
+  1.AXI has 1 read address channel, 1 write address channel, 1 read data channel, 1 write data channel. 1  write response channel That is all together it has 5 parallel channels,Whereas AHB has 1 address channel, 1 read data channel, 1 write data channel.  
+  2. AXI as native support for multiple outstanding transactions.   
+  3. AXI supports transaction IDs. The user may issue multiple outstanding transactions per transaction ID.   
+  4. User can insert a pipeline register anywhere in the path of any of the 5 channels, which helps in timing closure and help achieve higher operating frequency.
     

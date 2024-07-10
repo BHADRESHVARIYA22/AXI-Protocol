@@ -165,19 +165,18 @@ An address channel carries control information that describes the nature of the 
     - Lock type. Provides additional information about the atomic characteristics of the transfer. This changes between AXI3 and AXI4.  
   - **AWCACHE** Master  
     - Memory type. This signal indicates how transactions are required to progress through a system.  
-  - **AWPROT** Master
+  - **AWPROT** Master  
     - Protection type. This signal indicates the privilege and security level of the transaction, and whether the transaction is a data access or an instruction access.  
-**AWQOS** Master Quality of Service, QoS. The QoS identifier sent for each write transaction.
-Implemented only in AXI4. See QoS signaling on page A8-98.
-**AWREGION** Master Region identifier. Permits a single physical interface on a slave to be used for
-multiple logical interfaces.
-Implemented only in AXI4. See Multiple region signaling on page A8-99.
-**AWUSER** Master User signal. Optional User-defined signal in the write address channel.
-Supported only in AXI4. See User-defined signaling on page A8-100.
-**AWVALID** Master Write address valid. This signal indicates that the channel is signaling valid write
-address and control information. See Channel handshake signals on page A3-38.
-**AWREADY** Slave Write address ready. This signal indicates that the slave is ready to accept an
-address and associated control signals. See Channel handshake signals on
+  - **AWQOS** Master  
+    - Quality of Service, QoS. The QoS identifier sent for each write transaction. Implemented only in AXI4.  
+  - **AWREGION** Master   
+    - Region identifier. Permits a single physical interface on a slave to be used for multiple logical interfaces. Implemented only in AXI4.   
+  - **AWUSER** Master  
+    - User signal. Optional User-defined signal in the write address channel. Supported only in AXI4.   
+  - **AWVALID** Master  
+    - Write address valid. This signal indicates that the channel is signaling valid write address and control information.   
+  - **AWREADY** Slave  
+    - Write address ready. This signal indicates that the slave is ready to accept an address and associated control signals.  
 #### Write data channel signals  
 #### Write response channel signals  
 #### Read address channel signals  

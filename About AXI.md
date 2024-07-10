@@ -40,25 +40,24 @@ READY : At Destination : show when accept information (Both Read and Write data 
 LAST  : At Destination : Indicates the transfer of final data item in transaction  
 
 
-**Read and Write address channels**  
- Read and write transactions each have their own address channel.   
- The appropriate address channel carries all of the required address and control information for a transaction  
+#### **Read and Write address channels**  
+  - Read and write transactions each have their own address channel.
+  - The appropriate address channel carries all of the required address and control information for a transaction  
 
-**Read data channel**  
- The read data channel carries both the read data and the read response information from the slave to the master, and includes:  
-   • the data bus, that can be 8, 16, 32, 64, 128, 256, 512, or 1024 bits wide  
-   • a read response signal indicating the completion status of the read transaction.  
+#### **Read data channel**  
+  - The read data channel carries both the read data and the read response information from the slave to the master, and includes:
+    - the data bus, that can be 8, 16, 32, 64, 128, 256, 512, or 1024 bits wide
+    - a read response signal indicating the completion status of the read transaction.  
 
-**Write data channel**  
-  The write data channel carries the write data from the master to the slave and includes:  
-    • the data bus, that can be 8, 16, 32, 64, 128, 256, 512, or 1024 bits wide  
-    • a byte lane strobe signal for every eight data bits, indicating which bytes of the data are valid.  
- Write data channel information is always treated as buffered, so that the master can perform write transactions without slave acknowledgement of 
+#### **Write data channel**  
+- The write data channel carries the write data from the master to the slave and includes:
+  - the data bus, that can be 8, 16, 32, 64, 128, 256, 512, or 1024 bits wide
+  - a byte lane strobe signal for every eight data bits, indicating which bytes of the data are valid.  
+ - Write data channel information is always treated as buffered, so that the master can perform write transactions without slave acknowledgement of 
  previous write transactions.  
 
-**Write response channel**  
- A slave uses the write response channel to respond to write transactions. All write transactions require completion signaling on the write    
- response channel.  
+#### **Write response channel**  
+ - A slave uses the write response channel to respond to write transactions. All write transactions require completion signaling on the write response channel.   
 
 **Interface and interconnect**  
  A typical system consists of a number of master and slave devices connected together through some form of interconnect

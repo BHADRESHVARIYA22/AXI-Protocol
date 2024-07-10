@@ -253,7 +253,10 @@ information.
   - **CSYSACK** Peripheral device   
     - Exit low-power state acknowledgement. This signal is the acknowledgement from a peripheral to a system exit low-power state request.   
   - **CACTIVE** Peripheral device   
-    - Clock active. This signal indicates that the peripheral requires its clock signal.  
+    - Clock active. This signal indicates that the peripheral requires its clock signal.
+   
+# 3. Single Interface Requirements
+
 
  
 

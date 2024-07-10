@@ -1,4 +1,12 @@
 **AXI-Protocol**
+ below feature for This development:
+1) All basic Feature i.e. Handshaking, normal operation, multiple AXI channel (AXI parallel phases) , data strobing etc.
+2) Burst based transaction
+3) Multiple pipelined transaction (multiple outstanding addresses) 
+4) Interleaving
+5) out-of-order transaction
+6) Slave as Memory
+With different topologies like master VIP + slave VIP, master VIP + slave RTL, master RTL + slave VIP and both RTL with monitor/passive VIP.
 -----------------------------------------------------------------------------------------------------------
 **Reference : **
 -----------------------------------------------------------------------------------------------------------

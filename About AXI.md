@@ -157,28 +157,26 @@ An address channel carries control information that describes the nature of the 
     - Write address. The write address gives the address of the first transfer in a write burst transaction.  
   - **AWLEN** _Master_  
     - Burst length. The burst length gives the exact number of transfers in a burst. This information determines the number of data transfers associated with the address.This changes between AXI3 and AXI4.  
-AWSIZE Master Burst size. This signal indicates the size of each transfer in the burst. See Burst size
-on page A3-45.
-AWBURST Master Burst type. The burst type and the size information, determine how the address for
-each transfer within the burst is calculated. See Burst type on page A3-45.
-AWLOCK Master Lock type. Provides additional information about the atomic characteristics of the
-transfer. This changes between AXI3 and AXI4.
-See Locked accesses on page A7-95.
-AWCACHE Master Memory type. This signal indicates how transactions are required to progress
-through a system. See Memory types on page A4-65.
-AWPROT Master Protection type. This signal indicates the privilege and security level of the
-transaction, and whether the transaction is a data access or an instruction access.
-See Access permissions on page A4-71.
-AWQOS Master Quality of Service, QoS. The QoS identifier sent for each write transaction.
+  - **AWSIZE** Master  
+    - Burst size. This signal indicates the size of each transfer in the burst.  
+  - **AWBURST** Master
+    - Burst type. The burst type and the size information, determine how the address for each transfer within the burst is calculated.  
+  - **AWLOCK** Master  
+    - Lock type. Provides additional information about the atomic characteristics of the transfer. This changes between AXI3 and AXI4.  
+  - **AWCACHE** Master  
+    - Memory type. This signal indicates how transactions are required to progress through a system.  
+  - **AWPROT** Master
+    - Protection type. This signal indicates the privilege and security level of the transaction, and whether the transaction is a data access or an instruction access.  
+**AWQOS** Master Quality of Service, QoS. The QoS identifier sent for each write transaction.
 Implemented only in AXI4. See QoS signaling on page A8-98.
-AWREGION Master Region identifier. Permits a single physical interface on a slave to be used for
+**AWREGION** Master Region identifier. Permits a single physical interface on a slave to be used for
 multiple logical interfaces.
 Implemented only in AXI4. See Multiple region signaling on page A8-99.
-AWUSER Master User signal. Optional User-defined signal in the write address channel.
+**AWUSER** Master User signal. Optional User-defined signal in the write address channel.
 Supported only in AXI4. See User-defined signaling on page A8-100.
-AWVALID Master Write address valid. This signal indicates that the channel is signaling valid write
+**AWVALID** Master Write address valid. This signal indicates that the channel is signaling valid write
 address and control information. See Channel handshake signals on page A3-38.
-AWREADY Slave Write address ready. This signal indicates that the slave is ready to accept an
+**AWREADY** Slave Write address ready. This signal indicates that the slave is ready to accept an
 address and associated control signals. See Channel handshake signals on
 #### Write data channel signals  
 #### Write response channel signals  

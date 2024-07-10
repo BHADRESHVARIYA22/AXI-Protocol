@@ -134,10 +134,25 @@ An address channel carries control information that describes the nature of the 
 **AXI Beat**
   - An individual data transfer within an AXI burst.
 
-# 2. Signal Descriptions
+# 2. Signal Descriptions  
+### Contains the following sections:
+  - Global signals  
+  - Write address channel signals  
+  - Write data channel signals  
+  - Write response channel signals  
+  - Read address channel signals  
+  - Read data channel signals  
+  - Low-power interface signals  
 
-
-
+#### Global signals 
+  - **ACLK**    : Global clock signal.  
+  - **ARESETn** : Global reset signal, active LOW.
+#### Write address channel signals  
+#### Write data channel signals  
+#### Write response channel signals  
+#### Read address channel signals  
+#### Read data channel signals  
+#### Low-power interface signals  
  
  
 

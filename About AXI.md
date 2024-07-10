@@ -176,8 +176,23 @@ An address channel carries control information that describes the nature of the 
   - **AWVALID** Master  
     - Write address valid. This signal indicates that the channel is signaling valid write address and control information.   
   - **AWREADY** Slave  
-    - Write address ready. This signal indicates that the slave is ready to accept an address and associated control signals.  
+    - Write address ready. This signal indicates that the slave is ready to accept an address and associated control signals.
+    - 
 ## Write data channel signals  
+  - **WID** Master  
+    - Write ID tag. This signal is the ID tag of the write data transfer. Supported only in AXI3.  
+  - **WDATA** Master  
+    - Write data.  
+  - **WSTRB** Master  
+    - Write strobes. This signal indicates which byte lanes hold valid data. There is one write strobe bit for each eight bits of the write data bus.   
+  - **WLAST** Master  
+    - Write last. This signal indicates the last transfer in a write burst.   
+  - **WUSER** Master  
+    - User signal. Optional User-defined signal in the write data channel.Supported only in AXI4.   
+  - **WVALID** Master  
+    - Write valid. This signal indicates that valid write data and strobes are available.  
+  - **WREADY** Slave  
+Write ready. This signal indicates that the slave can accept the write data.  
 ## Write response channel signals  
 ## Read address channel signals  
 ## Read data channel signals  

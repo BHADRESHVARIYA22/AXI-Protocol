@@ -97,5 +97,31 @@
   - The Advanced Extensible interface (AXI) is useful for high bandwidth and low latency interconnects.  
   - This is a point to point interconnect and overcomes the limitations of a shared bus protocol in terms of number of agents that can be connected.  
   - The protocol also was an enhancement from AHB in terms of supporting multiple outstanding data transfers (pipe-lined), burst data transfers, separate read and write paths and supporting different bus widths.  
-  - **AXI-lite** protocol is a simplified version of AXI and the simplification comes in terms of no support for burst data transfers.     
+  - **AXI-lite** protocol is a simplified version of AXI and the simplification comes in terms of no support for burst data transfers.
+Both AXI (Advanced extensible Interface) and AHB (Advanced High Performance Bus) are part of the AMBA (Advanced Microcontroller Bus Architecture) Bus which are targeted towards High Performance, High Bandwidth, and High-Frequency System Design but due to some extra features in AXI as compared to AHB makes it more usable protocol in ASIC Verification and on-chip communication.
+
+## Difference Between AXI and AHB protocol 
+1] AXI is a multi-channel bus with 5 independent channels like Write address channel, Read address channel, Write data channel, Read data channel, Write response channel (Read Response is sent along with the Read data) while AHB is a single channel bus.  
+
+2] Because of the proper ordering model, AXI supports for multiple outstanding transactions while AHB support for Single outstanding transaction per bus master.  
+
+3] AXI support for out of order transaction completion with masters having different ID tag is allowed to complete in any order while AHB does not support any out of order transaction completion.  
+
+4] The minimum address space assigned for a single slave in AXI is 4 kb while the address space assigned for a slave in AHB is 1 kb.  
+
+5] AXI support Full-duplex mode of communication because of multiple and independent channels while AHB does not support Full-duplex mode.  
+
+6] AXI support system low power acknowledgement with the introduction of low power request signal csysack which enable AXI to operate in low power mode while AHB doesn't support low power request acknowledgement.  
+
+7] Since each channel is independent in AXI, there is no requirement to have a fixed relationship between the channel concerning data transfer which makes it easier to add Register slices and because of this AXI can operate in a higher frequency of operation as compared to AHB.  
+
+8] The features like unaligned data transfer using strobe and byte invariance are supported in AXI while AHB wouldn't support any of these features.  
+
+9] QOS and Write Data Interleaving are supported in AXI while no QOS and Write Data interleaving features are supported in AHB.  
+
+10] There are additional Signalling mechanism like AxRegion (Single Interface on a slave to be used for multiple logical interfaces) , AxUser (User Defined Signalling Mechanism) are present in AXI as compared to AHB.  
+
+11] Early Burst termination feature is absent in AXI but is present in AHB.  
+
+12] Semaphore mode of Operation is present in AXI with the help of Exclusive Access support while this is absent in AHB.     
     

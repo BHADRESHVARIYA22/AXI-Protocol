@@ -227,7 +227,7 @@ information.
     - a master interface must drive ARVALID, AWVALID, and WVALID LOW
     - a slave interface must drive RVALID and BVALID LOW
     - all other signals can be driven to any value
-  -  The earliest point after reset that a master is permitted to begin driving ARVALID, AWVALID, or WVALID HIGH is at a rising ACLK edge after ARESETn is HIGH.
+  -  The earliest point after reset that a master is permitted to begin driving ARVALID, AWVALID, or WVALID HIGH is at a rising ACLK edge after ARESETn is HIGH.  
   ![image](https://github.com/user-attachments/assets/d74f0f79-b82c-4705-a0a8-c6b44a601da1)
 
 

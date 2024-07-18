@@ -216,7 +216,7 @@ information.
     - Clock active. This signal indicates that the peripheral requires its clock signal.
    
 # 3. Single Interface Requirements  
-## Clock and Reset
+## 3.1 Clock and Reset
 ### Clock (ACKL) 
   - Each AXI component uses a single clock signal (ACKL)
   - All input Signal are samples on the rising edge of ACKL
@@ -229,6 +229,30 @@ information.
     - all other signals can be driven to any value
   -  The earliest point after reset that a master is permitted to begin driving ARVALID, AWVALID, or WVALID HIGH is at a rising ACLK edge after ARESETn is HIGH.  
   ![image](https://github.com/user-attachments/assets/d74f0f79-b82c-4705-a0a8-c6b44a601da1)
+
+### 3.2.1 Channel Handshake  
+  - All five transaction channels use the same VALID/READY handshake process to transfer address, data, and control
+  - information. This two-way flow control mechanism means both the master and slave can control the rate at which the information moves between master and slave.
+  - The source generates the VALID signal to indicate when the address, data or control information is available.
+  - The destination generates the READY signal to indicate that it can accept the information.
+  - Transfer occurs only when both the VALID and READY signals are HIGH.
+
+  - In Figure A3-2, the source presents the address, data or control information after T1 and asserts the VALID signal.
+  - The destination asserts the READY signal after T2, and the source must keep its information stable until the transfer occurs at T3, when this assertion is recognized.
+    
+  - ![image](https://github.com/user-attachments/assets/3714a566-5626-46a9-8dd3-40710b4b6f09)
+  - In Figure A3-3, the destination asserts READY, after T1, before the address, data or control information is valid,indicating that it can accept the information.
+  - The source presents the information, and asserts VALID, after T2, and the transfer occurs at T3, when this assertion is recognized.
+  - In this case, transfer occurs in a single cycle.
+  - ![image](https://github.com/user-attachments/assets/52dfa5fd-51f1-457e-beef-eb3ec152dcad)
+
+  - In Figure A3-4, both the source and destination happen to indicate, after T1, that they can transfer the address, data or control information.
+  - In this case the transfer occurs at the rising clock edge when the assertion of both VALID and READY can be recognized.
+  - This means the transfer occurs at T2.
+  - ![image](https://github.com/user-attachments/assets/e2895977-b187-4b74-8294-6b3c34b22df5)
+
+### 3.2.2 
+    
 
 
  

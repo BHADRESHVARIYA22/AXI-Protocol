@@ -141,11 +141,11 @@ The AMBA AXI protocol supports high-performance, high-frequency system designs.
 # 2. Signal Descriptions  
 ### Contains the following sections:
   - Global signals  
-  - Write address channel signals  
-  - Write data channel signals  
-  - Write response channel signals  
-  - Read address channel signals  
-  - Read data channel signals  
+  - Write address channel signals   (AW)
+  - Write data channel signals      (W)
+  - Write response channel signals  (B) 
+  - Read address channel signals    (AR)
+  - Read data channel signals       (R)
   - Low-power interface signals  
 
 ## Global signals 
@@ -215,7 +215,20 @@ information.
   - **CACTIVE** Peripheral device   
     - Clock active. This signal indicates that the peripheral requires its clock signal.
    
-# 3. Single Interface Requirements
+# 3. Single Interface Requirements  
+## Clock and Reset
+### Clock (ACKL) 
+  - Each AXI component uses a single clock signal (ACKL)
+  - All input Signal are samples on the rising edge of ACKL
+  - All Output Signal must occur after rising edge of ACKL
+### Reset (ARESETn) : Active LOW
+  - The reset signal can be asserted Asynchronously but Deassertion must be Synchronous with rising edge of ACKL
+  - During reset Following interface requirements apply:
+    - a master interface must drive ARVALID, AWVALID, and WVALID LOW
+    - a slave interface must drive RVALID and BVALID LOW
+    - all other signals can be driven to any value
+  -  The earliest point after reset that a master is permitted to begin driving ARVALID, AWVALID, or WVALID HIGH is at a rising ACLK edge after ARESETn is HIGH.
+  ![image](https://github.com/user-attachments/assets/d74f0f79-b82c-4705-a0a8-c6b44a601da1)
 
 
  

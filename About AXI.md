@@ -154,60 +154,16 @@ The AMBA AXI protocol supports high-performance, high-frequency system designs.
   - **ARESETn** : Global reset signal, active LOW.
     
 ## Write address channel signals  
-  - **Signal** _Source_ Description  
-  - **AWID** _Master_  
-    - Write address ID. This signal is the identification tag for the write address group of signals.  
-  - **AWADDR** _Master_  
-    - Write address. The write address gives the address of the first transfer in a write burst transaction.  
-  - **AWLEN** _Master_  
-    - Burst length. The burst length gives the exact number of transfers in a burst. This information determines the number of data transfers associated with the address.This changes between AXI3 and AXI4.  
-  - **AWSIZE** Master  
-    - Burst size. This signal indicates the size of each transfer in the burst.  
-  - **AWBURST** Master
-    - Burst type. The burst type and the size information, determine how the address for each transfer within the burst is calculated.  
-  - **AWLOCK** Master  
-    - Lock type. Provides additional information about the atomic characteristics of the transfer. This changes between AXI3 and AXI4.  
-  - **AWCACHE** Master  
-    - Memory type. This signal indicates how transactions are required to progress through a system.  
-  - **AWPROT** Master  
-    - Protection type. This signal indicates the privilege and security level of the transaction, and whether the transaction is a data access or an instruction access.  
-  - **AWQOS** Master  
-    - Quality of Service, QoS. The QoS identifier sent for each write transaction. Implemented only in AXI4.  
-  - **AWREGION** Master   
-    - Region identifier. Permits a single physical interface on a slave to be used for multiple logical interfaces. Implemented only in AXI4.   
-  - **AWUSER** Master  
-    - User signal. Optional User-defined signal in the write address channel. Supported only in AXI4.   
-  - **AWVALID** Master  
-    - Write address valid. This signal indicates that the channel is signaling valid write address and control information.    
-  - **AWREADY** Slave  
-    - Write address ready. This signal indicates that the slave is ready to accept an address and associated control signals.  
-    - 
-## Write data channel signals  
-  - **WID** Master  
-    - Write ID tag. This signal is the ID tag of the write data transfer. Supported only in AXI3.   
-  - **WDATA** Master  
-    - Write data.  
-  - **WSTRB** Master  
-    - Write strobes. This signal indicates which byte lanes hold valid data. There is one write strobe bit for each eight bits of the write data bus.    
-  - **WLAST** Master  
-    - Write last. This signal indicates the last transfer in a write burst.   
-  - **WUSER** Master  
-    - User signal. Optional User-defined signal in the write data channel.Supported only in AXI4.   
-  - **WVALID** Master  
-    - Write valid. This signal indicates that valid write data and strobes are available.  
-  - **WREADY** Slave  
-    - Write ready. This signal indicates that the slave can accept the write data.    
+  - Signals on this channel have the prefix AW.
+![image](https://github.com/user-attachments/assets/8c915d88-8139-43d1-9e96-5e43035c6698)  
+
+## Write data channel signals 
+  - Signals on this channel have the prefix W.
+![image](https://github.com/user-attachments/assets/1734826a-37fc-4428-aa59-caa63d7cc3a4)   
+ 
 ## Write response channel signals  
-  - **BID** Slave   
-    - Response ID tag. This signal is the ID tag of the write response.     
-  - **BRESP** Slave   
-    - Write response. This signal indicates the status of the write transaction.   
-  - **BUSER** Slave   
-    - User signal. Optional User-defined signal in the write response channel. Supported only in AXI4.   
-  - **BVALID** Slave   
-    - Write response valid. This signal indicates that the channel is signaling a valid write response.   
-  - **BREADY** Master   
-    - Response ready. This signal indicates that the master can accept a write response.   
+  - Signals on this channel have the prefix B.
+![image](https://github.com/user-attachments/assets/52ae9b54-5894-4e86-a97a-f139b240463a)
 ## Read address channel signals  
   - **ARID** Master  
     - Read address ID. This signal is the identification tag for the read address group of signals. 

@@ -26,9 +26,13 @@ The AMBA AXI protocol supports high-performance, high-frequency system designs.
 - 3 write Channels
   - write address
   - write data
-  - write response.  
-
-An address channel carries control information that describes the nature of the data to be transferred. 
+  - write response.
+- Write request, which has signal names beginning with AW.
+- Write data, which has signal names beginning withW.
+- Write response, which has signal names beginning with B.
+- Read request, which has signal names beginning with AR.
+- Read data, which has signal names beginning with R.
+- A request channel carries control information that describes the nature of the data to be transferred. This is known as a request.
 #### **The data is transferred between master and slave using either:**  
   - A write data channel to transfer data from the master to the slave. In a write transaction, the slave uses the write response channel to signal the completion of the transfer to the master.
   - A read data channel to transfer data from the slave to the master.
